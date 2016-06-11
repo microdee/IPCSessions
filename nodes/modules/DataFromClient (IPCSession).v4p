@@ -1,0 +1,139 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.103.dtd" >
+   <PATCH nodename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\DataFromClient (IPCSession).v4p" systemname="DataFromClient (IPCSession)" filename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\DataFromClient (IPCSession).v4p" scrollx="0" scrolly="-150">
+   <BOUNDS type="Window" left="5220" top="8610" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="34.101.0">
+   </PACK>
+   <NODE systemname="GetObject (VObjectCollection)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="GetObject (VObjectCollection)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1950" top="2220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Contains" visible="1">
+   </PIN>
+   <PIN pinname="Exclude" visible="1">
+   </PIN>
+   <PIN pinname="Source" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2115" top="1320" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2115" top="1320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Client">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="6" dstpinname="Filter">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2925" top="1170" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2925" top="1170" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Contains">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Contains">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3690" top="1185" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3690" top="1185" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Exclude">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Exclude">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="975" top="1020" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="975" top="1020" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Server">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="6" dstpinname="Source">
+   </LINK>
+   <NODE systemname="FilterType (Object)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="FilterType (Object)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1950" top="2970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Type Reference Object" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Type" slicecount="1" values="|VVVV.Packs.Messaging.Message, VVVV.Packs.Messaging, Version=2.2.5917.24430, Culture=neutral, PublicKeyToken=null|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Create (Message.Keep Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message.Keep Formular)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3000" top="2745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Type Reference Object">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Split (Message Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Split (Message Formular)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1950" top="3450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Configuration" slicecount="1" values="|Raw DataFromClient|">
+   </PIN>
+   <PIN pinname="DataFromClient" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="8" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2310" top="4065" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2310" top="4065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Data From Client|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="DataFromClient" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   </PATCH>
