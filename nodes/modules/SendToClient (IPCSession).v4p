@@ -121,6 +121,10 @@
    </PIN>
    <PIN pinname="Error" visible="1">
    </PIN>
+   <PIN pinname="Occurrence" visible="1">
+   </PIN>
+   <PIN pinname="Use Sync" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="FilterType (Object)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="FilterType (Object)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="1485" top="2835" width="100" height="100">
@@ -221,5 +225,45 @@
    <LINK srcnodeid="9" srcpinname="Error" dstnodeid="15" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4860" top="2145" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4860" top="2145" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Occurrence">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Occurrence">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5085" top="2895" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5085" top="2895" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Use Sync|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Use Sync">
    </LINK>
    </PATCH>

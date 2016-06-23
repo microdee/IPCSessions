@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.103.dtd" >
-   <PATCH nodename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\Server (IPCSession).v4p" systemname="Server (IPCSession)" filename="F:\vvvv\libs\md.ecosystem\packs\VObjects\nodes\modules\VObjectCollection\Server (IPCSession).v4p" scrollx="0" scrolly="5715">
+   <PATCH nodename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\Server (IPCSession).v4p" systemname="Server (IPCSession)" filename="F:\vvvv\libs\md.ecosystem\packs\VObjects\nodes\modules\VObjectCollection\Server (IPCSession).v4p" scrollx="0" scrolly="1080">
    <BOUNDS type="Window" left="-9855" top="5040" width="9000" height="9630">
    </BOUNDS>
    <PACK Name="VVVV.Packs" Version="0.2.0">
@@ -208,7 +208,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Create (Message Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message Formular)" componentmode="InAWindow" id="18">
+   <NODE systemname="Create (Message Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message Formular)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="2220" top="6300" width="2250" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="2130" top="4470" width="6000" height="4500">

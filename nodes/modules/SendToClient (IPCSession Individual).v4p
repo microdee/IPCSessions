@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.103.dtd" >
-   <PATCH nodename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\SendToClient (IPCSession Individual).v4p" systemname="SendToClient (IPCSession Individual)" filename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\SendToClient (IPCSession Individual).v4p" scrollx="0" scrolly="1230">
+   <PATCH nodename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\SendToClient (IPCSession Individual).v4p" systemname="SendToClient (IPCSession Individual)" filename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\SendToClient (IPCSession Individual).v4p" scrollx="0" scrolly="1725">
    <BOUNDS type="Window" left="2430" top="8730" width="9000" height="6000">
    </BOUNDS>
    <PACK Name="VVVV.Packs" Version="0.2.0">
@@ -31,7 +31,7 @@
    <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="0" dstpinname="Input">
    </LINK>
    <NODE systemname="Writer (Raw SharedMemory)" nodename="Writer (Raw SharedMemory)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="3210" top="4215" width="100" height="100">
+   <BOUNDS type="Node" left="3210" top="4815" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Shared Memory Name" visible="1">
    </PIN>
@@ -47,9 +47,9 @@
    </PIN>
    <PIN pinname="Error" visible="1">
    </PIN>
+   <PIN pinname="Use Sync" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="FromServer" dstnodeid="2" dstpinname="Shared Memory Name">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="3" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="3825" top="1290" width="795" height="240">
    </BOUNDS>
@@ -62,8 +62,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="FSBufSize" dstnodeid="2" dstpinname="Size in Bytes">
-   </LINK>
    <NODE systemname="Length (Raw)" nodename="Length (Raw)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="2115" top="2400" width="100" height="100">
    </BOUNDS>
@@ -105,9 +103,9 @@
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5415" top="1365" width="480" height="480">
+   <BOUNDS type="Box" left="6600" top="1380" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5415" top="1365" width="0" height="0">
+   <BOUNDS type="Node" left="6600" top="1380" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -125,9 +123,9 @@
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Write">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2520" top="5070" width="480" height="480">
+   <BOUNDS type="Box" left="2520" top="5670" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2520" top="5070" width="0" height="0">
+   <BOUNDS type="Node" left="2520" top="5670" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -143,9 +141,9 @@
    <LINK srcnodeid="2" srcpinname="Success" dstnodeid="8" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3420" top="5265" width="795" height="240">
+   <BOUNDS type="Box" left="3420" top="5865" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3420" top="5265" width="0" height="0">
+   <BOUNDS type="Node" left="3420" top="5865" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -161,9 +159,9 @@
    <LINK srcnodeid="2" srcpinname="Error Message" dstnodeid="9" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4620" top="5325" width="480" height="480">
+   <BOUNDS type="Box" left="4620" top="5925" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4620" top="5325" width="0" height="0">
+   <BOUNDS type="Node" left="4620" top="5925" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -177,5 +175,113 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Error" dstnodeid="10" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="5325" top="1500" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5325" top="1500" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Occurrence">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Occurrence (String)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (String)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3585" top="2505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Unique" visible="1">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Former Index" visible="1">
+   </PIN>
+   <PIN pinname="First Occurrence" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="FromServer" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="3390" top="3465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Unique" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="FromServer" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="2" dstpinname="Shared Memory Name">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" filename="" nodename="GetSlice (Spreads)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="4260" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="First Occurrence" dstnodeid="15" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="FSBufSize" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="3555" top="4140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="16" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="FSBufSize" dstnodeid="16" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="2" dstpinname="Size in Bytes">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5970" top="2310" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5970" top="2310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Use Sync|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Use Sync">
    </LINK>
    </PATCH>
