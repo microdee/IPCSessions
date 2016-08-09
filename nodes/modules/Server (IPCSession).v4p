@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.103.dtd" >
-   <PATCH nodename="F:\vvvv\libs\md.ecosystem\packs\IPCSessions\nodes\modules\Server (IPCSession).v4p" systemname="Server (IPCSession)" filename="F:\vvvv\libs\md.ecosystem\packs\VObjects\nodes\modules\VObjectCollection\Server (IPCSession).v4p" scrollx="0" scrolly="1080">
-   <BOUNDS type="Window" left="-9855" top="5040" width="9000" height="9630">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.104.dtd" >
+   <PATCH nodename="C:\vvvv\app\vvvv_50alpha34.104_x64\packs\IPCSessions\nodes\modules\Server (IPCSession).v4p" systemname="Server (IPCSession)" filename="F:\vvvv\libs\md.ecosystem\packs\VObjects\nodes\modules\VObjectCollection\Server (IPCSession).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="7635" top="2655" width="9000" height="9630">
    </BOUNDS>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -202,13 +202,13 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Match 1" dstnodeid="16" dstpinname="Input">
    </LINK>
-   <NODE systemname="Dictionary (VObjectCollection)" filename="..\..\..\VObjects\nodes\modules\VObjectCollection\Dictionary (VObjectCollection).v4p" nodename="Dictionary (VObjectCollection)" componentmode="Hidden" id="17">
+   <NODE systemname="Dictionary (VObjectCollection)" filename="%VVVV%\packs\VObjects\nodes\modules\VObjectCollection\Dictionary (VObjectCollection).v4p" nodename="Dictionary (VObjectCollection)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="1035" top="5775" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Create (Message Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message Formular)" componentmode="Hidden" id="18">
+   <NODE systemname="Create (Message Formular)" filename="%VVVV%\packs\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message Formular)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="2220" top="6300" width="2250" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="2130" top="4470" width="6000" height="4500">
@@ -280,7 +280,7 @@
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="18" dstpinname="FSBufSize">
    </LINK>
-   <NODE systemname="Add (VObjectCollection)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="Add (VObjectCollection)" componentmode="Hidden" id="22">
+   <NODE systemname="Add (VObjectCollection)" filename="%VVVV%\packs\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="Add (VObjectCollection)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="2040" top="7680" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Parent" visible="1">
@@ -312,7 +312,7 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Inverse Output" dstnodeid="22" dstpinname="Add">
    </LINK>
-   <NODE systemname="Remove (VObjectCollection)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="Remove (VObjectCollection)" componentmode="Hidden" id="24">
+   <NODE systemname="Remove (VObjectCollection)" filename="%VVVV%\packs\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="Remove (VObjectCollection)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="3750" top="7605" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Parent" visible="1">
@@ -330,7 +330,7 @@
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="24" dstpinname="Name">
    </LINK>
-   <NODE systemname="ToSpread (VObjectCollection)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="ToSpread (VObjectCollection)" componentmode="Hidden" id="25">
+   <NODE systemname="ToSpread (VObjectCollection)" filename="%VVVV%\packs\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="ToSpread (VObjectCollection)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="1035" top="7830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1">
@@ -342,7 +342,7 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="25" dstpinname="Source">
    </LINK>
-   <NODE systemname="FilterType (Object)" filename="..\..\..\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="FilterType (Object)" componentmode="Hidden" id="26">
+   <NODE systemname="FilterType (Object)" filename="%VVVV%\packs\VObjects\nodes\plugins\VVVV.Nodes.VObjects.dll" nodename="FilterType (Object)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="1035" top="8385" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Type Reference Object" visible="1">
@@ -354,7 +354,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Create (Message.Keep Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message.Keep Formular)" componentmode="Hidden" id="27">
+   <NODE systemname="Create (Message.Keep Formular)" filename="%VVVV%\packs\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message.Keep Formular)" componentmode="Hidden" id="27">
    <BOUNDS type="Node" left="2100" top="8160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -384,7 +384,7 @@
    <PIN pinname="Error" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (Message Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Split (Message Formular)" componentmode="Hidden" id="29">
+   <NODE systemname="Split (Message Formular)" filename="%VVVV%\packs\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Split (Message Formular)" componentmode="Hidden" id="29">
    <BOUNDS type="Node" left="2985" top="8610" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Configuration" slicecount="1" values="|string FromClient, int FCBufSize|">
@@ -440,7 +440,7 @@
    </NODE>
    <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Use Sync">
    </LINK>
-   <NODE systemname="Edit (Message Formular)" filename="..\..\..\..\..\..\app\commonpacks\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Edit (Message Formular)" componentmode="Hidden" id="32">
+   <NODE systemname="Edit (Message Formular)" filename="%VVVV%\packs\vvvv-Message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Edit (Message Formular)" componentmode="Hidden" id="32">
    <BOUNDS type="Node" left="2970" top="12150" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Configuration" slicecount="1" values="|Raw DataFromClient|">
@@ -450,6 +450,8 @@
    <PIN pinname="DataFromClient" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="AutoSense" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="EQ (Value)" filename="" nodename="EQ (Value)" componentmode="Hidden" id="33">
@@ -617,5 +619,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Inverse Output" dstnodeid="44" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3615" top="11775" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3615" top="11775" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="32" dstpinname="AutoSense">
    </LINK>
    </PATCH>
